@@ -1,0 +1,164 @@
+/***** Custom Properties *****/
+:root{
+    --bg-color:rgba(66, 66, 66, 0.938);
+}
+
+/***** Reset Styles *****/
+  
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    font-family:'Rubik Scribble', serif;
+}
+  
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    background-color: black;
+    color: white;
+}  
+  
+/***** My Styles *****/
+.btn-style{
+    width: 6rem;
+    height: 3rem;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    border: 2px solid white;
+    font-weight: bold;
+}
+
+.btn-style:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.footer{
+    text-align: center;
+    margin-top: 12.5vh;
+}
+
+.header{
+    text-align: center;
+    margin-bottom: 20vh;
+}
+
+.hide{
+    display: none;
+}
+
+img{
+    width: 1.6rem;
+    height: auto;
+}
+
+main{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+  
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15% auto;
+    padding: 20px;
+    border: 2px solid white;
+    width: 80%;
+}
+
+.modal-content p{
+    color: white;
+    font-weight: bold;
+}
+
+.points{
+    padding: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.show{
+    display: initial;
+}
+
+#snake{
+    position: absolute;
+    font-size: 2rem;
+}
+
+.stage{
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    border: 2px solid white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/***** Medias queries *****/
+
+@media (min-width: 700px){
+    .stage{
+        width: 35rem;
+        height: 35rem;
+    }
+
+    .footer{
+        margin-top: 7.5vh;
+    }
+    
+    .header{
+        margin-bottom: 10vh;
+    }
+
+    img{
+        width: 2rem;
+        height: auto;
+    }
+}
+
+@media (min-width: 1280px){
+    .stage{
+        width: 42rem;
+        height: 42rem;
+    }
+
+    .footer{
+        margin-top: 1rem;
+    }
+    
+    .header{
+        margin-bottom: 4vh;
+    }
+
+    img{
+        width: 2.5rem;
+        height: auto;
+    }
+}
