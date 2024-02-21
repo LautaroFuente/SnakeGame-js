@@ -92,6 +92,7 @@ $play.addEventListener('click', function(){
     $play.classList.add('hide');
     $snake.classList.add('show');
     $snake.classList.remove('hide');
+    disableScroll();
     move();
 });
 
@@ -107,6 +108,7 @@ function gameOver(){
     $snake.classList.remove('show');
     $modal.style.display = 'inherit';
     $totalPoints.textContent = `Puntuacion: ${pointCont}`;
+    enableScroll();
 }
 
 $continue.addEventListener('click', function(){
@@ -229,4 +231,26 @@ function detectColisionObstacle(inter1, inter2, inter3) {
   });
 
 
+}
+
+/* fix scrolling with playing */
+
+function disableScroll() {
+  document.body.style.overflow = 'hidden';
+}
+
+function enableScroll() {
+  document.body.style.overflow = '';
+}
+
+/* mobile */
+function emulateArrow(direccion) {
+
+  let event = new KeyboardEvent('keydown', {
+      key: direccion,
+      bubbles: true,
+      cancelable: true,
+  });
+
+  document.dispatchEvent(event);
 }
